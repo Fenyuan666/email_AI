@@ -1,0 +1,2 @@
+# email_AI
+借助deepseek，使用FastAPI加上Vue3实现文本内容转为邮件格式内容

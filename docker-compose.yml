@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # 后端API服务
+  backend:
+    build: ./email-api
+    container_name: email-backend
+    ports:
+      - "7000:8000"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - email-network
+
+  # 前端服务
+  frontend:
+    build: ./email
+    container_name: email-frontend
+    ports:
+      - "7001:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - email-network
+
+networks:
+  email-network:
+    driver: bridge 

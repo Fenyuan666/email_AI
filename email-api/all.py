@@ -10,7 +10,7 @@ class Config:
     host: str = "0.0.0.0"
     port: int = 8000
 
-    deepseek_api_key: str = "sk-7aab409ca6604e7c8f15a0e8d8ab9941"
+    deepseek_api_key: str = "sk-7aab409cxxxxxxxxxxxxxxxxxx1"
 
     with open("./mail.md","r",encoding="utf-8") as f:
         mail_template=f.read()
